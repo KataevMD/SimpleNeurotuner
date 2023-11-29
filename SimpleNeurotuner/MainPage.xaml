@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SimpleNeurotuner"
+             x:Class="SimpleNeurotuner.MainPage">
+
+    <ScrollView>
+       
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image
+                Source="Logo-light.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+             <Image
+                Grid.Row="0"
+                Grid.Column="1"
+                x:Name="nftImage"
+                HorizontalOptions="Center" />  
+
+
+            <Picker
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                x:Name="audioFilesPicker"
+                Title = "{local:Localize MainPageFilePickerTitle}"
+                SelectedIndexChanged="AudioFilesPickerSelectedIndexChanged"/>
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                
+                x:Name="PlayAudioBtn"
+                Text="{local:Localize MainPagePlayAudioBtn}"
+                Clicked="OnPlayAudioClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                x:Name="StopAudioBtn"
+                Text="{local:Localize MainPageStopAudioBtn}"
+                Clicked="OnStopAudioClicked"
+                HorizontalOptions="Center" />
+        </Grid>
+            
+        
+    </ScrollView>
+
+</ContentPage>
+

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<!--
+	AppShell
+	-->
+	<data name = "TabBarAboutNeurotuner" xml:space="preserve">
+		<value>Об нейротюнере</value>
+    </data>
+	<data name = "TabBarMainPage" xml:space="preserve">
+		<value>Воспроизведение</value>
+    </data>
+	<data name = "TabBarRecorderPage" xml:space="preserve">
+		<value>Запись</value>
+    </data>
+
+
+	<!--
+	MainPage
+	-->
+	<data name = "MainPageFilePickerTitle" xml:space="preserve">
+		<value>Выберите аудиозапись</value>
+    </data>
+	<data name = "MainPagePlayAudioBtn" xml:space="preserve">
+		<value>Воспрозвести</value>
+    </data>
+	<data name = "MainPageStopAudioBtn" xml:space="preserve">
+		<value>Остановить</value>
+    </data>
+	<data name = "logLbl" xml:space="preserve">
+		<value>Привет мир!</value>
+    </data>
+
+
+	<!--
+	RecorderPage
+	-->
+	<data name = "RecorderPageStartRecordBtn" xml:space="preserve">
+		<value>Запись</value>
+    </data>
+	<data name = "RecorderPageStopRecordBtn" xml:space="preserve">
+		<value>Закочнить</value>
+    </data>
+	<data name = "RecorderPageAudioFileNameEntry" xml:space="preserve">
+		<value>Введите название аудифайла</value>
+    </data>
+
+	<!--
+	Всплывающие уведомления
+	-->
+	<data name = "YesBtn" xml:space="preserve">
+		<value>Да</value>
+    </data>
+	<data name = "NoBtn" xml:space="preserve">
+		<value>Нет</value>
+    </data>
+	<data name = "TitlePopUpRecorderPage" xml:space="preserve">
+		<value>Воспроизведение аудиофайла</value>
+    </data>
+	<data name = "TextPopUpRecorderPage" xml:space="preserve">
+		<value>Хотите ли вы прослушать записанный аудиофал перед сохранением?</value>
+    </data>
+	<data name = "TitlePopUpSaveAudioRecorderPage" xml:space="preserve">
+		<value>Сохранение аудиофайла</value>
+    </data>
+	<data name = "TextPopUpSaveAudioRecorderPage" xml:space="preserve">
+		<value>Сохранить записаный аудиофайл?</value>
+    </data>
+
+
+</root>

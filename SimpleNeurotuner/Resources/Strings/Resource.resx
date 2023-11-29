@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+		<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer" xml:space="preserve">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name = "logLbl" xml:space="preserve">
+		<value>Hello world!</value>
+    </data>
+		<data name = "TabBarAboutNeurotuner" xml:space="preserve">
+		<value>About neurotuner</value>
+    </data>
+	<data name = "TabBarMainPage" xml:space="preserve">
+		<value>Playback</value>
+    </data>
+	<data name = "TabBarRecorderPage" xml:space="preserve">
+		<value>Record</value>
+    </data>
+	<data name = "MainPageFilePickerTitle" xml:space="preserve">
+		<value>Select an audio recording</value>
+    </data>
+	<data name = "MainPagePlayAudioBtn" xml:space="preserve">
+		<value>Play</value>
+    </data>
+	<data name = "MainPageStopAudioBtn" xml:space="preserve">
+		<value>Stop</value>
+    </data>
+	<data name = "RecorderPageStartRecordBtn" xml:space="preserve">
+		<value>Record</value>
+    </data>
+	<data name = "RecorderPageStopRecordBtn" xml:space="preserve">
+		<value>Stop record</value>
+    </data>
+	<data name = "RecorderPageAudioFileNameEntry" xml:space="preserve">
+		<value>Enter the name of the audio file</value>
+    </data>
+</root>

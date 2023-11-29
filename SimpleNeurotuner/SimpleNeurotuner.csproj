@@ -1,0 +1,111 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>SimpleNeurotuner</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>SimpleNeurotuner</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.simpleneurotuner</ApplicationId>
+		<ApplicationIdGuid>F06798BB-82DC-40A2-8843-0B1F76095272</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	  <LangVersion>10.0</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	  <LangVersion>10.0</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Services\" />
+	  <None Remove="Platforms\MacCatalyst\Services\" />
+	  <None Remove="Platforms\iOS\Services\" />
+	  <None Remove="Microsoft.Extensions.Localization" />
+	  <None Remove="Resources\Strings\" />
+	  <None Remove="NAudio" />
+	  <None Remove="System.Drawing.Common" />
+	  <None Remove="SkiaSharp" />
+	  <None Remove="CSCore" />
+	  <None Remove="portaudio" />
+	  <None Remove="portaudio.redist" />
+	  <None Remove="PortAudioSharp" />
+	  <None Remove="ManagedBass" />
+	  <None Remove="Plugin.AudioRecorder" />
+	  <None Remove="SFML.Net" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Services\" />
+	  <Folder Include="Platforms\MacCatalyst\Services\" />
+	  <Folder Include="Platforms\iOS\Services\" />
+	  <Folder Include="Resources\Strings\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\Logo-light.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Update="Resources\Strings\Resources.ru.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resource.ru.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Strings\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Resources\Strings\Resources.ru.Designer.cs">
+	    <DependentUpon>Resource.ru.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Strings\Resources.Designer.cs">
+	    <DependentUpon>Resource.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.8" />
+	  <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+	  <PackageReference Include="SFML.Net" Version="2.5.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="AboutNeurotuner.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="RecorderPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	</ItemGroup>
+</Project>

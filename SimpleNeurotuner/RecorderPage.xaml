@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SimpleNeurotuner"
+             x:Class="SimpleNeurotuner.RecorderPage"
+             Title="RecorderPage">
+    <ScrollView>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Entry
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                x:Name="AudioFileNameEntry"
+                Placeholder="{local:Localize RecorderPageAudioFileNameEntry}" />
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                x:Name="StartRecordBtn"
+                Text="{local:Localize RecorderPageStartRecordBtn}"
+                Clicked="OnStartRecordClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                x:Name="StopRecordBtn"
+                Text="{local:Localize RecorderPageStopRecordBtn}"
+                Clicked="OnStopRecordClicked"
+                HorizontalOptions="Center" />
+        </Grid>
+
+    </ScrollView>
+   
+</ContentPage>
